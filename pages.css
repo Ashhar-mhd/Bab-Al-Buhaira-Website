@@ -1,0 +1,17 @@
+/* Service landing pages (family-visa-sharjah.html etc.). Loaded after styles.css. */
+.crumbs { font-size: .9rem; color: var(--on-navy-2); }
+.crumbs a { color: var(--on-navy-2); }
+.sp-hero .hero-in { grid-template-columns: minmax(0, 1fr); }
+.sp-hero h1 { max-width: 22ch; }
+.sp-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.sp-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 24px; display: grid; gap: 12px; align-content: start; }
+.sp-card h2, .sp-card h3 { font-size: 1.2rem; }
+.sp-card ul { margin: 0; padding-inline-start: 1.2em; color: var(--ink-2); display: grid; gap: 6px; }
+.sp-text { max-width: 760px; display: grid; gap: 14px; color: var(--ink-2); font-size: 1.04rem; }
+.sp-text h2 { color: var(--ink); font-size: clamp(1.5rem, 3vw, 2rem); }
+.sp-price { border-inline-start: 4px solid var(--gold); background: var(--gold-soft); color: var(--ink); padding: 14px 18px; border-radius: 8px; }
+.sp-links { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.sp-links a { display: inline-block; text-decoration: none; font-weight: 600; border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 8px 16px; }
+.sp-links a:hover { border-color: var(--gold); }
+.band-navy .sp-links a { background: transparent; color: var(--on-navy); border-color: rgba(255,255,255,.25); }
+@media (max-width: 760px) { .sp-grid { grid-template-columns: minmax(0, 1fr); } }
