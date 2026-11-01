@@ -523,5 +523,13 @@ window.BAB_LANG_AR = {
  "Requirements depend on your nationality and change often, so we confirm everything before we apply. Prices include government fees and our service charge, and were checked in October 2026.": "تختلف المتطلبات حسب جنسيتك وتتغير كثيرًا، لذا نؤكد كل شيء قبل تقديم الطلب. الأسعار تشمل الرسوم الحكومية ورسوم خدمتنا، وتمت مراجعتها في أكتوبر 2026.",
  "Show fewer countries": "عرض دول أقل",
  "WhatsApp": "واتساب",
+ "Guides": "الأدلة",
+ "from 56 Google reviews": "من 56 تقييمًا على Google",
+ "Rated 4.9 out of 5 from 56 Google reviews": "تقييم 4.9 من 5 من 56 مراجعة على Google",
+ "Step-by-step guides": "أدلة خطوة بخطوة",
+ "Family visa documents checklist": "قائمة مستندات تأشيرة العائلة",
+ "Golden Visa: who qualifies": "الإقامة الذهبية: من يستحقها",
+ "Certificate attestation steps": "خطوات تصديق الشهادات",
+ "All guides": "جميع الأدلة",
  "Bab Al Buhaira Typing Services": "Bab Al Buhaira Typing Services"
 };

@@ -15,3 +15,25 @@
 .sp-links a:hover { border-color: var(--gold); }
 .band-navy .sp-links a { background: transparent; color: var(--on-navy); border-color: rgba(255,255,255,.25); }
 @media (max-width: 760px) { .sp-grid { grid-template-columns: minmax(0, 1fr); } }
+/* Guides (guides.html and guide-*.html) */
+.gd-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.gd-card { text-decoration: none; color: var(--ink); transition: border-color .15s; }
+.gd-card:hover { border-color: var(--gold); }
+.gd-card p { color: var(--ink-2); margin: 0; }
+.gd-more { font-weight: 700; color: var(--ink); }
+.gd-more::after { content: " →"; color: var(--gold); }
+.gd-article ul, .gd-article ol { margin: 0; padding-inline-start: 1.3em; display: grid; gap: 8px; }
+.gd-article h2 { margin-top: 14px; }
+.gd-steps li::marker { color: var(--gold); font-weight: 800; }
+.fine-note { font-size: .9rem; color: var(--ink-2); }
+@media (max-width: 960px) { .gd-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* Google rating badge (homepage hero). Update the number in index.html from time to time. */
+.g-rating { display: inline-flex; align-items: center; gap: 10px; margin-top: 4px; padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.25); color: var(--on-navy); text-decoration: none; width: fit-content; }
+.g-rating:hover { border-color: var(--gold); }
+.g-stars { color: var(--gold); letter-spacing: 2px; font-size: 1.05rem; }
+.g-rating strong { font-family: var(--font-display); color: var(--on-navy); }
+.g-rating .g-text { color: var(--on-navy-2); font-size: .95rem; }
+
+/* Phone menu: let the links wrap to a second row instead of overflowing (5 links on the homepage). */
+@media (max-width: 860px) { .nav { flex-wrap: wrap; row-gap: 6px; } }
