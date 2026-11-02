@@ -64,7 +64,7 @@
         { id: "where", label: "Where are the family members now?", type: "seg", options: [["out", "Outside UAE"], ["in", "Inside UAE"]], def: "out",
           show: function (s) { return s.mode === "new"; } },
         { id: "adults", label: "Adults (18 and over)", type: "count", def: 1, help: "Spouse or adult children. Parents are quoted separately." },
-        { id: "children", label: "Children (under 18)", type: "count", def: 2 },
+        { id: "children", label: "Children (under 18)", type: "count", def: 0 },
         { id: "file", label: "Is the sponsor's family file already open?", type: "seg", options: [["no", "No"], ["yes", "Yes"]], def: "no",
           show: function (s) { return s.mode === "new"; } },
         { id: "insurance", label: "Health insurance", type: "select", def: "basic",
