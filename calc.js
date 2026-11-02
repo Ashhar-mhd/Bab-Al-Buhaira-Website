@@ -105,7 +105,7 @@
         if (s.emirate !== "dubai" && s.tenancy === "no") { quote = true; notes.push("Without a tenancy contract in the sponsor's name we need to check the case first."); }
         return { lines: L, notes: notes, quote: quote };
       },
-      docs: ["Sponsor's passport, visa and Emirates ID", "Family member's passport and white-background photo", "Attested marriage certificate (spouse)", "Attested birth certificate (children)", "Tenancy contract and utility bill", "Salary certificate or labour contract"]
+      docs: ["Sponsor's Passport and Emirates ID", "Family Member's (Applicant) Passport and Photo", "Marriage Certificate (spouse)", "Birth Certificate (children)", "Tenancy Contract", "Labour Contract (Private) / Salary Certificate (Free Zone or Government)"]
     },
     {
       id: "employee", name: "Employee visa", hint: "Work permits",
