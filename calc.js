@@ -10,6 +10,7 @@
   var FEES = {
     family: {
       fileOpening:      { dubai: 295,  other: 395 },
+      fileOpeningPak:   { dubai: 345,  other: 395 },
       entryIn:          { dubai: 1095, other: 395 },
       entryOut:         { dubai: 395,  other: 395 },
       entryInPak:       { dubai: 1195, other: 395 },
@@ -82,7 +83,7 @@
         var F = FEES.family, z = zone(s), L = [], notes = [], quote = false;
         var people = s.adults + s.children;
         if (s.mode === "new") {
-          if (s.file !== "yes") L.push(["Family file opening", 1, F.fileOpening[z]]);
+          if (s.file !== "yes") L.push(["Family file opening", 1, (z === "dubai" && s.pak === "yes" ? F.fileOpeningPak : F.fileOpening)[z]]);
           var entry = s.where === "in"
             ? (z === "dubai" && s.pak === "yes" ? F.entryInPak : F.entryIn)
             : (z === "dubai" && s.pak === "yes" ? F.entryOutPak : F.entryOut);
