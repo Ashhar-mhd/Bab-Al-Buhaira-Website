@@ -47,3 +47,8 @@
 .faq-help p { margin: 0; font-weight: 700; color: var(--ink); }
 .faq-help-btns { display: flex; flex-wrap: wrap; gap: 10px; }
 .faq-all { margin-top: 18px; }
+
+/* Service cards on the homepage: "View details" link to the service page */
+.svc-more { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-weight: 700; font-size: .92rem; color: var(--ink); text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; background: var(--surface); width: fit-content; }
+.svc-more::after { content: "→"; color: var(--gold); }
+.svc-more:hover { border-color: var(--gold); }

@@ -62,29 +62,29 @@ var GUIDE = [
 ];
 
 var SERVICES = [
-  { t: "Visas & residency", d: "New visas, renewals and cancellations for you and your family.", tags: "ICP · GDRFA · Amer",
+  { p: "uae-visas.html", t: "Visas & residency", d: "New visas, renewals and cancellations for you and your family.", tags: "ICP · GDRFA · Amer",
     items: ["Family visa", "Visit visa", "Golden Visa", "Green Visa", "Employment visa", "Newborn visa", "Visa cancellation", "Status change"] },
-  { t: "Emirates ID & medical", d: "Typing, medical test booking and biometrics guidance.", tags: "ICP · EHS",
+  { p: "emirates-id.html", t: "Emirates ID & medical", d: "Typing, medical test booking and biometrics guidance.", tags: "ICP · EHS",
     items: ["New Emirates ID", "Emirates ID renewal", "Lost card replacement", "Medical fitness typing"] },
-  { t: "Government typing, Tasheel & Amer", d: "All kinds of government application typing for people and companies.", tags: "MOHRE · Tasheel · Amer · MOI",
+  { p: "government-typing.html", t: "Government typing, Tasheel & Amer", d: "All kinds of government application typing for people and companies.", tags: "MOHRE · Tasheel · Amer · MOI",
     items: ["Labour contracts", "Work permits", "Labour cancellation", "Establishment card", "Company PRO services"] },
-  { t: "Business setup", d: "Start, renew or change your trade licence.", tags: "Mainland · Free zone",
+  { p: "business-setup.html", t: "Business setup", d: "Start, renew or change your trade licence.", tags: "Mainland · Free zone",
     items: ["New trade licence", "Licence renewal", "Licence amendment", "Partner changes", "Office tenancy (Ejari)"] },
-  { t: "Attestation & translation", d: "Translation in 100+ languages and attestation for documents from 100+ countries.", tags: "MOFA · Embassy · Consulate",
+  { p: "attestation.html", t: "Attestation & translation", d: "Translation in 100+ languages and attestation for documents from 100+ countries.", tags: "MOFA · Embassy · Consulate",
     items: ["Legal translation, 100+ languages", "Arabic ⇄ English", "Malayalam, Hindi, Urdu, Tamil", "Documents from 100+ countries", "Degree attestation", "Marriage & birth certificates", "MOFA attestation"] },
-  { t: "PCC, lost certificates & legal", d: "Police clearance, lost certificate reports and legal case typing.", tags: "MOI · Police · Courts",
+  { p: "pcc.html", t: "PCC, lost certificates & legal", d: "Police clearance, lost certificate reports and legal case typing.", tags: "MOI · Police · Courts",
     items: ["Police clearance (PCC)", "Lost certificate services", "MOI services", "Cheque return cases", "Legal typing"] },
-  { t: "Visas for 100+ countries", d: "Visa applications and embassy or consulate appointments worldwide.", tags: "Embassy · Consulate",
+  { p: "global-visas.html", t: "Visas for 100+ countries", d: "Visa applications and embassy or consulate appointments worldwide.", tags: "Embassy · Consulate",
     items: ["Visas for 100+ countries", "Embassy & consulate appointments", "GCC countries", "Saudi visit visa", "Umrah visa", "Qatar Hayya A1", "Oman", "India", "Georgia", "Uzbekistan", "Turkey", "Kazakhstan", "Azerbaijan", "Sri Lanka", "Nepal", "Bhutan", "Indonesia"] },
-  { t: "Tickets & travel", d: "Flights, hotels and holiday packages, booked for you.", tags: "Air · Hotels",
+  { p: "travel.html", t: "Tickets & travel", d: "Flights, hotels and holiday packages, booked for you.", tags: "Air · Hotels",
     items: ["Flight tickets", "Hotel booking", "Holiday packages", "Travel insurance"] },
-  { t: "Insurance", d: "Cover that meets UAE visa and RTA rules.", tags: "Health · Vehicle",
+  { p: "insurance.html", t: "Insurance", d: "Cover that meets UAE visa and RTA rules.", tags: "Health · Vehicle",
     items: ["Health insurance", "Vehicle insurance", "Travel insurance"] },
-  { t: "Tenancy & utilities", d: "Home paperwork in Sharjah, done in one visit.", tags: "SEWA · Municipality",
+  { p: "tenancy-utilities.html", t: "Tenancy & utilities", d: "Home paperwork in Sharjah, done in one visit.", tags: "SEWA · Municipality",
     items: ["Tenancy contract attestation", "SEWA connection", "Sharjah parking permit"] },
-  { t: "Passport services", d: "Passport applications and appointments for you and your baby.", tags: "Indian · Pakistani · Embassy",
+  { p: "passport-services.html", t: "Passport services", d: "Passport applications and appointments for you and your baby.", tags: "Indian · Pakistani · Embassy",
     items: ["Indian passport renewal", "Newborn baby passport", "Passport appointment booking", "Pakistan passport services"] },
-  { t: "CV, printing & photos", d: "Everyday office jobs while you wait.", tags: "In-house",
+  { p: "cv-printing-photos.html", t: "CV, printing & photos", d: "Everyday office jobs while you wait.", tags: "In-house",
     items: ["CV writing", "Printing & photocopy", "Scanning", "Passport photos", "Studio photos"] }
 ];
 
@@ -114,6 +114,7 @@ SERVICES.forEach(function (s, i) {
       "<h3><button type=\"button\" class=\"svc-toggle\" aria-expanded=\"false\" aria-controls=\"svc-b" + i + "\">" + esc(s.t) +
         "<span class=\"svc-chev\" aria-hidden=\"true\"></span></button></h3>" +
       "<p class=\"svc-desc\">" + esc(s.d) + "</p>" +
+      "<a class=\"svc-more\" href=\"" + s.p + "\">View details</a>" +
     "</div>" +
     "<div class=\"svc-body\" id=\"svc-b" + i + "\"><div class=\"svc-inner\">" +
       "<ul>" + s.items.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" +
@@ -128,6 +129,7 @@ function setOpen(card, open) {
   card.querySelector(".svc-toggle").setAttribute("aria-expanded", open ? "true" : "false");
 }
 grid.addEventListener("click", function (e) {
+  if (e.target.closest(".svc-more")) return;
   var head = e.target.closest(".svc-head");
   if (!head) return;
   var card = head.parentNode, open = !card.classList.contains("open");
