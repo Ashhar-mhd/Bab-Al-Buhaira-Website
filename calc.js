@@ -83,7 +83,7 @@
         var F = FEES.family, z = zone(s), L = [], notes = [], quote = false;
         var people = s.adults + s.children;
         if (s.mode === "new") {
-          if (s.file !== "yes") L.push(["Family file opening", 1, (z === "dubai" && s.pak === "yes" ? F.fileOpeningPak : F.fileOpening)[z]]);
+          if (s.file !== "yes") L.push(["File opening", 1, (z === "dubai" && s.pak === "yes" ? F.fileOpeningPak : F.fileOpening)[z]]);
           var entry = s.where === "in"
             ? (z === "dubai" && s.pak === "yes" ? F.entryInPak : F.entryIn)
             : (z === "dubai" && s.pak === "yes" ? F.entryOutPak : F.entryOut);
@@ -106,7 +106,9 @@
         if (s.emirate !== "dubai" && s.tenancy === "no") { quote = true; notes.push("Without a tenancy contract in the sponsor's name we need to check the case first."); }
         return { lines: L, notes: notes, quote: quote };
       },
-      docs: ["Sponsor's Passport and Emirates ID", "Family Member's (Applicant) Passport and Photo", "Marriage Certificate (spouse)", "Birth Certificate (children)", "Tenancy Contract", "Labour Contract (Private) / Salary Certificate (Free Zone or Government)"]
+      docs: ["Sponsor's Passport and Emirates ID", "Family Member's (Applicant) Passport and Photo", "Marriage Certificate (spouse)", "Birth Certificate (children)", "Tenancy Contract", "Labour Contract (Private) / Salary Certificate (Free Zone or Government)"],
+      // Dubai family visas do not need the tenancy contract.
+      docsFor: function (s) { return s.emirate === "dubai" ? this.docs.filter(function (d) { return d !== "Tenancy Contract"; }) : this.docs; }
     },
     {
       id: "employee", name: "Employee visa", hint: "Work permits",
@@ -349,7 +351,7 @@
     totalEl.textContent = newTotal;
     byId("r-quote").hidden = !quote;
     byId("r-notes").innerHTML = (r.notes || []).map(function (n) { return "<li>" + esc(n) + "</li>"; }).join("");
-    byId("r-docs").innerHTML = cat.docs.map(function (d) { return "<li>" + esc(d) + "</li>"; }).join("");
+    byId("r-docs").innerHTML = (cat.docsFor ? cat.docsFor(state) : cat.docs).map(function (d) { return "<li>" + esc(d) + "</li>"; }).join("");
     byId("r-date").textContent = PRICE_DATE;
 
     var answers = cat.fields.filter(visible).map(function (f) {
