@@ -613,3 +613,7 @@ section[id] { scroll-margin-top: calc(20px - clamp(56px, 8vw, 96px)); }
 .res-table tfoot td { text-align: end; }
 .res-table tfoot th, .res-table tfoot td { font-size: clamp(1.15rem, 3.6vw, 1.35rem); }
 @media (min-width: 600px) { .res-table thead th:last-child { width: 116px; } }
+
+/* Phone menu safety net: wrap links onto a second row and never let the page scroll sideways. */
+@media (max-width: 860px) { .nav { flex-wrap: wrap; row-gap: 6px; } }
+html, body { overflow-x: clip; }
