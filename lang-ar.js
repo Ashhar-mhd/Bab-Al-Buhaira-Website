@@ -537,5 +537,7 @@ window.BAB_LANG_AR = {
  "Golden Visa: who qualifies": "الإقامة الذهبية: من يستحقها",
  "Certificate attestation steps": "خطوات تصديق الشهادات",
  "All guides": "جميع الأدلة",
+ "FAQ": "الأسئلة الشائعة",
+ "See all frequently asked questions →": "عرض جميع الأسئلة الشائعة ←",
  "Bab Al Buhaira Typing Services": "Bab Al Buhaira Typing Services"
 };

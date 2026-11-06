@@ -37,3 +37,12 @@
 
 /* Phone menu: let the links wrap to a second row instead of overflowing (5 links on the homepage). */
 @media (max-width: 860px) { .nav { flex-wrap: wrap; row-gap: 6px; } }
+
+/* FAQ page (faq.html) */
+.faq-page { max-width: 860px; }
+.faq-topics { margin: 18px 0 8px; }
+.faq-group { margin-top: 40px; scroll-margin-top: 90px; }
+.faq-group h2 { font-size: clamp(1.35rem, 2.6vw, 1.7rem); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid var(--gold); }
+.faq-more { margin-top: 14px; }
+.faq-more a { font-weight: 700; color: var(--ink); text-decoration: none; border-bottom: 2px solid var(--gold); }
+.faq-more a:hover { color: var(--gold); }
