@@ -52,3 +52,7 @@
 .svc-more { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-weight: 700; font-size: .92rem; color: var(--ink); text-decoration: none; border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; background: var(--surface); width: fit-content; }
 .svc-more::after { content: "→"; color: var(--gold); }
 .svc-more:hover { border-color: var(--gold); }
+
+/* Visa/ID expiry checker: keep big day counts (e.g. 4196) from overlapping the text */
+.exp-result strong { flex: 0 0 auto; white-space: nowrap; }
+.exp-result span { flex: 1 1 auto; min-width: 0; }
