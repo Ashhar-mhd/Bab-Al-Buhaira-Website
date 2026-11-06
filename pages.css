@@ -43,6 +43,7 @@
 .faq-topics { margin: 18px 0 8px; }
 .faq-group { margin-top: 40px; scroll-margin-top: 90px; }
 .faq-group h2 { font-size: clamp(1.35rem, 2.6vw, 1.7rem); margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid var(--gold); }
-.faq-more { margin-top: 14px; }
-.faq-more a { font-weight: 700; color: var(--ink); text-decoration: none; border-bottom: 2px solid var(--gold); }
-.faq-more a:hover { color: var(--gold); }
+.faq-help { margin-top: 14px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 20px; background: var(--gold-soft); border-inline-start: 4px solid var(--gold); border-radius: var(--r); padding: 14px 18px; }
+.faq-help p { margin: 0; font-weight: 700; color: var(--ink); }
+.faq-help-btns { display: flex; flex-wrap: wrap; gap: 10px; }
+.faq-all { margin-top: 18px; }
