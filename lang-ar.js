@@ -202,7 +202,7 @@ window.BAB_LANG_AR = {
  "Starting price": "سعر يبدأ من",
  "This case needs a quick check. Send us your details on WhatsApp and we reply with an exact quote.": "تحتاج هذه الحالة إلى مراجعة سريعة. أرسل لنا التفاصيل على واتساب وسنرد بعرض سعر دقيق.",
  "We prepare an itemised quote for this visa after a quick check.": "نُعد عرض سعر مفصّلًا لهذه التأشيرة بعد مراجعة سريعة.",
- "Family file opening": "فتح ملف عائلي",
+ "File opening": "فتح ملف",
  "Entry permit (outside UAE)": "تصريح دخول (خارج الإمارات)",
  "Entry permit (inside UAE)": "تصريح دخول (داخل الإمارات)",
  "Change of status": "تعديل الوضع",
