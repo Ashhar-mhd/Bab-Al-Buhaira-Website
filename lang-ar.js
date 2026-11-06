@@ -539,5 +539,6 @@ window.BAB_LANG_AR = {
  "All guides": "جميع الأدلة",
  "FAQ": "الأسئلة الشائعة",
  "See all frequently asked questions": "عرض جميع الأسئلة الشائعة",
+ "View details": "عرض التفاصيل",
  "Bab Al Buhaira Typing Services": "Bab Al Buhaira Typing Services"
 };
