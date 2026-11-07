@@ -351,7 +351,7 @@
       g.querySelectorAll("details").forEach(function (d) {
         var hit = !ws.length || hasAll(d.textContent, ws);
         d.hidden = !hit; d.open = false; if (hit) shown++;
-        var s = d.querySelector("summary"); s.innerHTML = ws.length && hit ? mark(s.dataset.t, ws) : esc(s.dataset.t);
+        var s = d.querySelector("summary"); s.innerHTML = ws.length && hit ? "<span>" + mark(s.dataset.t, ws) + "</span>" : esc(s.dataset.t);
       });
       g.hidden = shown === 0; total += shown;
       ranked.push({ g: g, score: ws.length && hasAll(head, ws) ? 2 : shown ? 1 : 0 });
