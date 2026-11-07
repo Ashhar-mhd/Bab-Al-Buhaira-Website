@@ -56,3 +56,10 @@
 /* Visa/ID expiry checker: keep big day counts (e.g. 4196) from overlapping the text */
 .exp-result strong { flex: 0 0 auto; white-space: nowrap; }
 .exp-result span { flex: 1 1 auto; min-width: 0; }
+
+/* FAQ search results */
+.faq-results { margin: -12px 0 8px; display: grid; gap: 12px; }
+.faq-count { margin: 0; font-weight: 700; color: var(--ink); }
+.faq-sugg { background: var(--gold-soft); border-inline-start: 4px solid var(--gold); border-radius: var(--r); padding: 14px 18px; }
+.faq-sugg p { margin: 0 0 10px; font-weight: 700; color: var(--ink); }
+.faq-page summary mark { background: var(--gold-soft); color: inherit; border-radius: 3px; padding: 0 2px; }
